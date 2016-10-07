@@ -1,0 +1,9 @@
+<% menu = [["Photos", photos_path], ["Tags", tags_path], ["Submit photo", new_photo_path]] %>
+
+<nav class="pure-menu pure-menu-horizontal">
+  <ul class="pure-menu-list">
+    <% menu.each do |item, url| %>
+    <li class="pure-menu-item"><%= link_to item, url, class: "pure-menu-link" %></li>
+    <% end %>
+  </ul>
+</nav>
