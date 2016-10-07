@@ -1,0 +1,5 @@
+<h1>Photos</h1>
+
+<% @photos.each do |photo| %>
+  <%= link_to image_tag(photo.image.url(:thumbnail), alt: photo.title), photo_url(photo) %>
+<% end %>

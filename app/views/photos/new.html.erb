@@ -1,0 +1,19 @@
+<h1>Upload</h1>
+
+<%= form_for @photo, html: { class: "pure-form pure-form-aligned" } do |f| %>
+<fieldset>
+  <div class="pure-control-group">
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  </div>
+
+  <div class="pure-control-group">
+  <%= f.label :image %>
+  <%= f.file_field :image, accept: "image/*" %>
+  </div>
+
+  <div class="pure-controls">
+  <%= f.submit "Upload", class: "pure-button pure-button-primary" %>
+  </div>
+</fieldset>
+<% end %>
