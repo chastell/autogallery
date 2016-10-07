@@ -14,6 +14,7 @@ class PhotosController < ApplicationController
   def create
     @photo = Photo.new(photo_params)
     if @photo.save
+      TaggingService.new.tag(@photo)
       redirect_to '/tags'
     else
       render :new
