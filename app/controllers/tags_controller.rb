@@ -4,7 +4,8 @@ class TagsController < ApplicationController
   end
 
   def show
-    @photos = Tag.find(params[:id]).photos
+    @tag = Tag.find(params[:id])
+    @photos = @tag.photos
     render 'photos/index'
   end
 end

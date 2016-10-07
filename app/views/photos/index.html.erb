@@ -1,4 +1,10 @@
-<h1>Photos</h1>
+<h1>
+<% if @tag %>
+  Photos tagged “<%= @tag.name %>”
+<% else %>
+  All photos
+<% end %>
+</h1>
 
 <% @photos.each do |photo| %>
   <%= link_to image_tag(photo.image.url(:thumbnail), alt: photo.title), photo_url(photo) %>
