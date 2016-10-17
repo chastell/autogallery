@@ -1,9 +1,3 @@
 <h1>Tags</h1>
-
 <p>Please select a tag to display all photos tagged with that tag.</p>
-
-<ul>
-  <% @tags.each do |tag| %>
-  <li><%= link_to tag.name, tag_path(tag) %></li>
-  <% end %>
-</ul>
+<%= render "shared/tags", tags: @tags %>

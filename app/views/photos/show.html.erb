@@ -1,12 +1,5 @@
 <figure>
   <%= image_tag(@photo.image.url, alt: @photo.title) %>
   <figcaption><%= @photo.title %></figcaption>
-  <div class="tags">
-    Tags:
-    <ul>
-      <% @photo.tags.each do |tag| %>
-      <li><%= link_to tag.name, tag_path(tag) %></li>
-      <% end %>
-    </ul>
-  </div>
+  <%= render "shared/tags", tags: @photo.tags %>
 </figure>

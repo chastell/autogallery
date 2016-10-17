@@ -22,7 +22,7 @@ end
 ExternalTag = Struct.new(:name, :prob)
 
 class TaggingService
-  CUTOFF = 0.6
+  CUTOFF = 0.8
 
   def initialize
     ClarifaiRuby.configure do |config|
