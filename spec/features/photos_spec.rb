@@ -13,7 +13,7 @@ RSpec.describe "Photos page", type: :feature do
 
   it "should display individual photos" do
     visit '/photos'
-    find("a").click
+    find_all("a").last.click
     expect(page).to have_text("Beautiful photo")
   end
 end
