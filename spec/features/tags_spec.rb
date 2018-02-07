@@ -4,7 +4,7 @@ RSpec.describe "Tags page", type: :feature do
   before do
     @nature = Tag.create(name: "nature")
     @indoor = Tag.create(name: "indoor")
-    @photo = FactoryGirl.create(:photo)
+    @photo = FactoryBot.create(:photo)
     TaggedPhoto.create(photo: @photo, tag: @nature)
   end
 

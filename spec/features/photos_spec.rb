@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Photos page", type: :feature do
   before do
-    @photo = FactoryGirl.create(:photo)
+    @photo = FactoryBot.create(:photo)
   end
 
   it "should render correctly" do
